@@ -1,0 +1,114 @@
+{% extends "layout.html" %}
+{% block content %}
+    <!-- Starts image section -->
+    <div class="row justify-content-md-center mb-4">
+        <h2 class='text-primary'>Verify the Success of Your Order</h2>
+    </div>
+    <div class="row justify-content-md-center">
+        <div class="col-md-6" >
+            <div class="thumbnail">
+                <img src="{{url_for('static', filename='home1.webp')}}" class="img-thumbnail" class="center"/>
+                <div class="caption">
+                     <p><strong> </strong></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Ends image section -->
+    <!-- Starts form section -->
+    <div class="form-container">
+        <form class="form-horizontal" action = "/predict/" method="post">
+        
+            <!-- <div class="form-group row justify-content-md-center">
+              <label class="control-label col-sm-2" for="state">Shipping State</label>
+              <div class="col-sm-4">
+                <select class="form-control" id="state" name="state">
+                    <option value="AN">Andaman and Nicobar Islands</option>
+                    <option value="AP">Andhra Pradesh</option>
+                    <option value="AR">Arunachal Pradesh</option>
+                    <option value="AS">Assam</option>
+                    <option value="BR">Bihar</option>
+                    <option value="CH">Chandigarh</option>
+                    <option value="CT">Chhattisgarh</option>
+                    <option value="DN">Dadra and Nagar Haveli</option>
+                    <option value="DD">Daman and Diu</option>
+                    <option value="DL">Delhi</option>
+                    <option value="GA">Goa</option>
+                    <option value="GJ">Gujarat</option>
+                    <option value="HR">Haryana</option>
+                    <option value="HP">Himachal Pradesh</option>
+                    <option value="JK">Jammu and Kashmir</option>
+                    <option value="JH">Jharkhand</option>
+                    <option value="KA">Karnataka</option>
+                    <option value="KL">Kerala</option>
+                    <option value="LA">Ladakh</option>
+                    <option value="LD">Lakshadweep</option>
+                    <option value="MP">Madhya Pradesh</option>
+                    <option value="MH">Maharashtra</option>
+                    <option value="MN">Manipur</option>
+                    <option value="ML">Meghalaya</option>
+                    <option value="MZ">Mizoram</option>
+                    <option value="NL">Nagaland</option>
+                    <option value="OR">Odisha</option>
+                    <option value="PY">Puducherry</option>
+                    <option value="PB">Punjab</option>
+                    <option value="RJ">Rajasthan</option>
+                    <option value="SK">Sikkim</option>
+                    <option value="TN">Tamil Nadu</option>
+                    <option value="TG">Telangana</option>
+                    <option value="TR">Tripura</option>
+                    <option value="UP">Uttar Pradesh</option>
+                    <option value="UT">Uttarakhand</option>
+                    <option value="WB">West Bengal</option>
+                </select>
+              </div>
+            </div> -->
+            
+            <div class="form-group row justify-content-md-center">
+              <label class="control-label col-sm-2" for="item_total">Item Total</label>
+              <div class="col-sm-4">          
+                <input type="text" class="form-control" id="item_total" name="item_total">
+              </div>
+            </div>
+
+            <div class="form-group row justify-content-md-center">
+              <label class="control-label col-sm-2" for="ship_fee">Shipping Fee</label>
+              <div class="col-sm-4">
+                <input type="text" class="form-control" id="ship_fee" name="ship_fee">
+              </div>
+            </div>
+            
+            <div class="form-group row justify-content-md-center">
+              <label class="control-label col-sm-2" for="quantity">Quantity</label>
+              <div class="col-sm-4">
+                <input type="text" class="form-control" id="quantity" name="quantity">
+              </div>
+            </div>
+
+            <div class="form-group row justify-content-md-center">
+              <label class="control-label col-sm-2" for="cod">COD</label>
+              <div class="col-sm-4">
+                <select class="form-control" id="cod" name="cod">
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group row justify-content-md-center">
+                <label class="control-label col-sm-2" for="date">Order Date</label>
+                <div class="col-sm-4">
+                  <input type="date" class="form-control" id="date" name="date">
+                </div>
+              </div>
+            
+            <div class="form-group row justify-content-md-center">
+            <label class="control-label col-sm-2">&nbsp;</label>
+              <div class="col-sm-offset-2 col-sm-4">
+                <button type="submit" class="btn btn-primary">Predict</button>
+              </div>
+            </div>
+          </form>
+        <!-- Ends form section -->
+    </div>
+{% endblock %}
